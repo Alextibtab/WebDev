@@ -1,0 +1,264 @@
+/* === Website Stuff === */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 10px;
+    height: 100%;
+    background-color: #0B132B; 
+}
+
+root {
+    --clr-primary: #EFF1F3;
+    --clr-secondary: #E2FCEF;
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fw-black: 900;
+}
+
+@font-face {
+    font-family: akira;
+    src: url(../fonts/Akira\ Expanded\ Demo.otf);
+}
+
+#container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === Intro Section === */
+#intro {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.introBox {
+    width: 95%;
+    height: 40%;
+
+    background: linear-gradient(to left, #1C2541 50%, #0B132B 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+}
+
+#introText {
+    text-align: center;
+
+    line-height: 38vh;
+
+    font-family: akira;
+    color: #e2e2e2;
+    font-size: 12em;
+    font-weight: var(--fw-bold);
+}
+
+/* === Front Page === */
+
+/* Main section*/
+#main {
+    width: 0%;
+}
+
+/* Navbar classes */
+#mainNav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    padding-bottom: 3em;
+
+    background: linear-gradient(to bottom, #1C2541, #0B132B);
+}
+
+#mainNav a {
+    opacity: 0;
+
+    display: block;
+    float: left;
+
+    color: #e2e2e2;
+    font-family: akira;
+    font-size: 3em;
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+}
+
+#mainNav a:hover {
+    transform: scale(1.2);
+    cursor: pointer;   
+}
+
+#navHeader{
+    opacity: 0;
+
+    margin-top: 2%;
+
+    width: 100%;
+    text-align: center;
+
+    font-family: akira;
+    color: #e2e2e2;
+    font-size: 9em;
+    font-weight: var(--fw-bold);
+}
+
+/* === SOLAR SYSTEM === */
+
+/* Default styling & positioning */
+.sol {
+    opacity: 0;
+}
+
+.planet,
+.star {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    top: calc(55% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+    border-radius: 50%;
+}
+
+/* Planet and Star parameters */
+.sun {
+    --size: 150px;
+    background: linear-gradient(45deg, #FFD670, #3A506B);
+    animation: sun 20s infinite linear;
+}
+
+.mercury {
+    --size: 3.2px;
+    background: linear-gradient(45deg, #EBEBD3, #1C2541);
+    animation: mercury 10s infinite linear;
+}
+
+.venus {
+    --size: 5px;
+    background: linear-gradient(45deg, #F8E077, #1C2541);
+    animation: venus 15s infinite linear;
+}
+
+.earth {
+    --size: 5.2px;
+    background: linear-gradient(45deg, #1446A0, #1C2541);
+    animation: earth 20s infinite linear;
+}
+
+.mars {
+    --size: 3.7px;
+    background: linear-gradient(45deg, #e77d11, #1C2541);
+    animation: mars 25s infinite linear;
+}
+
+.jupiter {
+    --size: 37.1px;
+    background: linear-gradient(45deg, #AD8F85, #1C2541);
+    animation: jupiter 30s infinite linear;
+}
+
+.saturn {
+    --size: 31.4px;
+    background: linear-gradient(45deg, #E3B264, #1C2541);
+    animation: saturn 35s infinite linear;
+}
+
+.uranus {
+    --size: 14.7px;
+    background: linear-gradient(45deg, #7AB0CD, #1C2541);
+    animation: uranus 40s infinite linear;
+}
+
+.neptune {
+    --size: 14.4px;
+    background: linear-gradient(45deg, #065275, #1C2541);
+    animation: neptune 45s infinite linear;
+}
+
+/* Animations */
+@keyframes sun {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg)
+    }   
+}
+
+@keyframes mercury {
+    from {
+        transform: rotate(0) translateX(-95px);
+    }
+    to {
+        transform: rotate(360deg) translateX(-95px);
+    }
+}
+
+@keyframes venus {
+    from {
+        transform: rotate(0) translateX(115px);
+    }
+    to {
+        transform: rotate(360deg) translateX(115px);
+    }
+}
+
+@keyframes earth {
+    from {
+        transform: rotate(0) translateX(-140px);
+    }
+    to {
+        transform: rotate(360deg) translateX(-140px);
+    }
+}
+
+@keyframes mars {
+    from {
+        transform: rotate(0) translateX(165px);
+    }
+    to {
+        transform: rotate(360deg) translateX(165px);
+    }
+}
+
+@keyframes jupiter {
+    from {
+        transform: rotate(360deg) translateY(200px);
+    }
+    to {
+        transform: rotate(0) translateY(200px);
+    }
+}
+
+@keyframes saturn {
+    from {
+        transform: rotate(0) translateX(245px);
+    }
+    to {
+        transform: rotate(360deg) translateX(245px);
+    }
+}
+
+@keyframes uranus {
+    from {
+        transform: rotate(360deg) translateY(-285px);
+    }
+    to {
+        transform: rotate(0) translateY(-285px);
+    }
+}
+
+@keyframes neptune {
+    from {
+        transform: rotate(0) translateX(320px);
+    }
+    to {
+        transform: rotate(360deg) translateX(320px);
+    }
+}
